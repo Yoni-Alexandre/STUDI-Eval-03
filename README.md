@@ -1,7 +1,9 @@
 # STUDI-Eval-03
 
 - Ouvrez votre terminal (ou le terminal depuis votre IDE) et rendez-vous dans le répertoire où vous souhaitez importer le projet :
-```cd /chemin/de/votre/projet```
+```
+cd /chemin/de/votre/projet
+```
 
 - Connexion à mysql
 ```
