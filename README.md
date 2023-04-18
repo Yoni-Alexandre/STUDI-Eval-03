@@ -1,7 +1,6 @@
 # STUDI-Eval-03
 
 - Ouvrez votre terminal (ou le terminal depuis votre IDE) et rendez-vous dans le répertoire où vous souhaitez importer le projet :
-
 ```cd /chemin/de/votre/projet```
 
 - Connexion à mysql
@@ -10,7 +9,7 @@
 - Création de la BDD
 ```CREATE DATABASE brault_studi_cine;```
 
--- Connexion à la BBD
+- Connexion à la BBD
 ```USE brault_studi_cine;```
 
 - Création des tables
@@ -62,13 +61,15 @@ CREATE TABLE Ticket (
     id_user INT NOT NULL,
     FOREIGN KEY (id_seance) REFERENCES Seance(id) ON DELETE CASCADE,
     FOREIGN KEY (id_user) REFERENCES User(id) ON DELETE CASCADE
-); ```
+); 
+```
 
 - Insertion de données dans la BDD
 ```INSERT INTO cinema (id, nom, adresse)
 VALUES (1, 'cinema A', '1 Rue des Cinémas, 75001 Paris'),
        (2, 'cinema B', '15 Rue du Cinéma, 75002 Paris'),
-       (3, 'cinema C', '28 Rue des Arts, 75003 Paris');```
+       (3, 'cinema C', '28 Rue des Arts, 75003 Paris');
+```
 
 - Sauvegarde de la BDD dans un fichier .sql
 ```mysqldump -u root -p brault_studi_cine > C:\Users\brault\Desktop\brault_studi_cine.sql```
@@ -80,4 +81,5 @@ VALUES (1, 'cinema A', '1 Rue des Cinémas, 75001 Paris'),
 ```mysql -u root -p
 CREATE DATABASE brault_studi_cine;
 USE brault_studi_cine;
-SOURCE C:\Users\brault\Desktop\brault_studi_cine.sql```
+SOURCE C:\Users\brault\Desktop\brault_studi_cine.sql
+```
