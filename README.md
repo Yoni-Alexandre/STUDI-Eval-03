@@ -4,13 +4,19 @@
 ```cd /chemin/de/votre/projet```
 
 - Connexion à mysql
-```mysql -u root -p```
+```
+mysql -u root -p
+```
 
 - Création de la BDD
-```CREATE DATABASE brault_studi_cine;```
+```
+CREATE DATABASE brault_studi_cine;
+```
 
 - Connexion à la BBD
-```USE brault_studi_cine;```
+```
+USE brault_studi_cine;
+```
 
 - Création des tables
 
@@ -67,20 +73,26 @@ CREATE TABLE Ticket (
 ```
 
 - Insertion de données dans la BDD
-```INSERT INTO cinema (id, nom, adresse)
+```
+INSERT INTO cinema (id, nom, adresse)
 VALUES (1, 'cinema A', '1 Rue des Cinémas, 75001 Paris'),
        (2, 'cinema B', '15 Rue du Cinéma, 75002 Paris'),
        (3, 'cinema C', '28 Rue des Arts, 75003 Paris');
 ```
 
 - Sauvegarde de la BDD dans un fichier .sql
-```mysqldump -u root -p brault_studi_cine > C:\Users\brault\Desktop\brault_studi_cine.sql```
+```
+mysqldump -u root -p brault_studi_cine > C:\Users\brault\Desktop\brault_studi_cine.sql
+```
 
 - Restaurer la BDD
-```mysql -u root -p brault_studi_cine < C:\Users\brault\Desktop\brault_studi_cine.sql```
+```
+mysql -u root -p brault_studi_cine < C:\Users\brault\Desktop\brault_studi_cine.sql
+```
 
 - Si la BDD a été completement effacée
-```mysql -u root -p
+```
+mysql -u root -p
 CREATE DATABASE brault_studi_cine;
 USE brault_studi_cine;
 SOURCE C:\Users\brault\Desktop\brault_studi_cine.sql
