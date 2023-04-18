@@ -1,11 +1,5 @@
 # STUDI-Eval-03
 
-- Avoir installé Composer
-- Avoir un compte GitHub et avoir installé Git sur votre ordinateur
-- Avoir un serveur web et une base de données SQL (Laragon, XAMPP, WAMPP etc..)
-
-## Etapes pour l'installation du projet "Le Quai Antique"
-
 - Ouvrez votre terminal (ou le terminal depuis votre IDE) et rendez-vous dans le répertoire où vous souhaitez importer le projet :
 
 ```cd /chemin/de/votre/projet```
@@ -24,33 +18,33 @@
     id INT PRIMARY KEY AUTO_INCREMENT,
     nom VARCHAR(50) NOT NULL,
     adresse VARCHAR(255) NOT NULL
-);```
+);
 
-```CREATE TABLE Salle (
+CREATE TABLE Salle (
     id INT PRIMARY KEY AUTO_INCREMENT,
     nom VARCHAR(50) NOT NULL,
     capacite INT NOT NULL,
     id_cinema INT NOT NULL,
     FOREIGN KEY (id_cinema) REFERENCES Cinema(id) ON DELETE CASCADE
-);```
+);
 
-```CREATE TABLE User (
+CREATE TABLE User (
     id INT PRIMARY KEY AUTO_INCREMENT,
     nom VARCHAR(50) NOT NULL,
     prenom VARCHAR(50) NOT NULL,
     email VARCHAR(255) NOT NULL UNIQUE,
     mot_de_passe VARCHAR(255) NOT NULL
-);```
+);
 
-```CREATE TABLE Film (
+CREATE TABLE Film (
     id INT PRIMARY KEY AUTO_INCREMENT,
     titre VARCHAR(100) NOT NULL,
     duree TIME NOT NULL,
     description TEXT NOT NULL,
     categorie INT NOT NULL
-);```
+);
 
-```CREATE TABLE Seance (
+CREATE TABLE Seance (
     id INT PRIMARY KEY AUTO_INCREMENT,
     date_seance DATE NOT NULL,
     horaire TIME NOT NULL,
@@ -58,9 +52,9 @@
     id_salle INT NOT NULL,
     FOREIGN KEY (id_film) REFERENCES Film(id) ON DELETE CASCADE,
     FOREIGN KEY (id_salle) REFERENCES Salle(id) ON DELETE CASCADE
-);```
+);
 
-```CREATE TABLE Ticket (
+CREATE TABLE Ticket (
     id INT PRIMARY KEY AUTO_INCREMENT,
     prix FLOAT NOT NULL,
     type ENUM('plein_tarif', 'etudiant', 'moins_de_14_ans') NOT NULL,
@@ -68,7 +62,7 @@
     id_user INT NOT NULL,
     FOREIGN KEY (id_seance) REFERENCES Seance(id) ON DELETE CASCADE,
     FOREIGN KEY (id_user) REFERENCES User(id) ON DELETE CASCADE
-);```
+); ```
 
 - Insertion de données dans la BDD
 ```INSERT INTO cinema (id, nom, adresse)
